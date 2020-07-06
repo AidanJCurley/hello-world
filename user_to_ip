@@ -1,0 +1,18 @@
+from first_level_domain import DomainGet
+from ip_address import get_ip_address
+
+
+# ask user for the URL of the target website
+request = input("input the URL of the website: ")
+
+# create an object from the DomainGet class
+req1 = DomainGet(request)
+
+# assign the result of get_domain_name to a variable
+base_fld = req1.get_domain_name(request)
+# print said variable
+print("The first level domain is: " + base_fld)
+
+ip_address = get_ip_address(base_fld)
+
+print("IP: " + ip_address)
