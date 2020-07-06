@@ -1,0 +1,16 @@
+# import f from tld - used to get the first level domain of a website
+from tld import get_fld
+import self
+
+
+class DomainGet:
+    def __init__(self, url):
+        self.url = url
+    # function to get tld from the full url
+
+    def get_domain_name(self, url):
+        # get_tld(url) is passed the url and converts it to a tld
+        domain_name = get_fld(url)
+        # return the top level domain name
+        print("FLD done")
+        return domain_name
